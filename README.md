@@ -38,6 +38,7 @@ GROUP BY
   decade
 ORDER BY
   decade;
+```sql
 
 Visualization & Insight:
 
