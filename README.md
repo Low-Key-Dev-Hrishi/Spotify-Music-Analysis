@@ -38,7 +38,6 @@ GROUP BY
   decade
 ORDER BY
   decade;
-```sql
 Visualization & Insight:
 
 The analysis reveals a clear, decades-long increase in both the energy and danceability of popular music, peaking in the 2000s. The 2020s show the first slight decline in average energy, suggesting a potential shift in musical trends, possibly influenced by the rise of lower-energy, mood-based genres on streaming platforms.
