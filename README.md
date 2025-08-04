@@ -1,3 +1,5 @@
+Markdown
+
 # An Analysis of Popular Music Trends on Spotify (1922-2021)
 
 ## 1. Project Objective
@@ -38,7 +40,6 @@ GROUP BY
   decade
 ORDER BY
   decade;
-
 Visualization & Insight:
 
 The analysis reveals a clear, decades-long increase in both the energy and danceability of popular music, peaking in the 2000s. The 2020s show the first slight decline in average energy, suggesting a potential shift in musical trends, possibly influenced by the rise of lower-energy, mood-based genres on streaming platforms.
@@ -47,6 +48,8 @@ Question 2: Who are the most prolific artists?
 To identify the artists with the largest number of tracks in the catalog, a query was run to count the tracks for each artist.
 
 SQL Query:
+
+SQL
 
 SELECT
     primary_artist,
@@ -60,7 +63,6 @@ GROUP BY
 ORDER BY
     track_count DESC
 LIMIT 20;
-
 Visualization & Insight:
 
 The results show a diverse mix of artists, from classical composers like Bach and Mozart to legendary singers like Frank Sinatra. This highlights the comprehensive nature of the Spotify catalog and the longevity of certain artists' work.
@@ -69,6 +71,8 @@ Question 3: What were the top 3 most energetic songs of each decade?
 To answer this, an advanced query using CTEs and the RANK() window function was required to rank songs within each decade based on their energy level.
 
 SQL Query:
+
+SQL
 
 WITH
   decade_stat AS (
@@ -102,10 +106,9 @@ FROM
   ranked_songs
 WHERE
   energy_rank <= 3;
-
 Result & Insight:
 
 This query successfully identifies the highest-energy tracks for each decade. The results show a fascinating mix of genres, from early Rock & Roll and Punk in the mid-20th century to intense Metal and Electronic subgenres in more recent decades. This demonstrates how the peak energy of music has been expressed differently across various eras.
 
 4. Conclusion
-This project successfully demonstrates an end-to-end analytical workflow. By cleaning raw data, loading
+This project successfully demonstrates an end-to-end analytical workflow. By cleaning raw data, loading it into a relational database, and using a combination of SQL and Python, meaningful insights were extracted about the evolution of popular music. The findings confirm long-term trends and reveal specific, high-impact tracks and artists, showcasing a comprehensive approach to data analysis.
