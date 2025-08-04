@@ -26,6 +26,7 @@ The cleaned data was then loaded into a PostgreSQL table named `spotify_tracks_c
 To analyze the evolution of music, the average `danceability` and `energy` were calculated for each decade since 1950.
 
 **SQL Query:**
+```sql
 SELECT
     FLOOR(release_year / 10) * 10 AS decade,
     AVG(danceability) AS avg_danceability,
