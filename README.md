@@ -102,8 +102,7 @@ FROM
 WHERE
   energy_rank <= 3;
 
-Result & Insight:
-
+3.Result & Insight:
 This query successfully identifies the highest-energy tracks for each decade. The results show a fascinating mix of genres, from early Rock & Roll and Punk in the mid-20th century to intense Metal and Electronic subgenres in more recent decades. This demonstrates how the peak energy of music has been expressed differently across various eras.
 4. Conclusion
 This project successfully demonstrates an end-to-end analytical workflow. By cleaning raw data, loading it into a relational database, and using a combination of SQL and Python, meaningful insights were extracted about the evolution of popular music. The findings confirm long-term trends and reveal specific, high-impact tracks and artists, showcasing a comprehensive approach to data analysis.
