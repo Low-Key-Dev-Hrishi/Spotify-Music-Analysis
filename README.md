@@ -26,7 +26,6 @@ The cleaned data was then loaded into a PostgreSQL table named `spotify_tracks_c
 To analyze the evolution of music, the average `danceability` and `energy` were calculated for each decade since 1950.
 
 **SQL Query:**
-```sql
 SELECT
     FLOOR(release_year / 10) * 10 AS decade,
     AVG(danceability) AS avg_danceability,
@@ -42,4 +41,24 @@ ORDER BY
 
 Visualization & Insight:
 
-The analysis reveals a clear, decades-long increase in both the energy and danceability of popular music, peaking in the 2000s. The 2020s show the first slight decline in average energy, suggesting a potential shift in musical trends, possibly influenced by the rise of lower-energy, mood-based genres on streaming platforms.
+The analysis reveals a clear, decades-long increase in both the energy and danceability of popular music, peaking in the 2000s.
+The 2020s show the first slight decline in average energy, suggesting a potential shift in musical trends, possibly influenced by the rise of lower-energy, mood-based genres on streaming platforms.
+
+Question 2: Who are the most prolific artists?
+To identify the artists with the largest number of tracks in the catalog, a query was run to count the tracks for each artist.
+
+SQL Query:
+SELECT
+    primary_artist,
+    COUNT(*) AS track_count
+FROM
+    spotify_tracks_clean
+WHERE
+    primary_artist IS NOT NULL
+GROUP BY
+    primary_artist
+ORDER BY
+    track_count DESC
+LIMIT 20;
+
+
