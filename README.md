@@ -1,5 +1,3 @@
-Markdown
-
 # An Analysis of Popular Music Trends on Spotify (1922-2021)
 
 ## 1. Project Objective
@@ -112,3 +110,10 @@ This query successfully identifies the highest-energy tracks for each decade. Th
 
 4. Conclusion
 This project successfully demonstrates an end-to-end analytical workflow. By cleaning raw data, loading it into a relational database, and using a combination of SQL and Python, meaningful insights were extracted about the evolution of popular music. The findings confirm long-term trends and reveal specific, high-impact tracks and artists, showcasing a comprehensive approach to data analysis.
+
+
+
+
+
+
+
