@@ -37,7 +37,7 @@ WHERE
 GROUP BY
   decade
 ORDER BY
-  decade;
+  decade;```
 
 Visualization & Insight:
 
