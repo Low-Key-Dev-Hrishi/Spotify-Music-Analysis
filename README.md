@@ -46,9 +46,6 @@ Question 2: Who are the most prolific artists?
 To identify the artists with the largest number of tracks in the catalog, a query was run to count the tracks for each artist.
 
 SQL Query:
-
-SQL
-
 SELECT
     primary_artist,
     COUNT(*) AS track_count
@@ -63,15 +60,12 @@ ORDER BY
 LIMIT 20;
 Visualization & Insight:
 
-The results show a diverse mix of artists, from classical composers like Bach and Mozart to legendary singers like Frank Sinatra. This highlights the comprehensive nature of the Spotify catalog and the longevity of certain artists' work.
-
+The results show a diverse mix of artists, from classical composers like Bach and Mozart to legendary singers like Frank Sinatra.
+This highlights the comprehensive nature of the Spotify catalog and the longevity of certain artists' work.
 Question 3: What were the top 3 most energetic songs of each decade?
 To answer this, an advanced query using CTEs and the RANK() window function was required to rank songs within each decade based on their energy level.
 
 SQL Query:
-
-SQL
-
 WITH
   decade_stat AS (
     SELECT
@@ -104,16 +98,3 @@ FROM
   ranked_songs
 WHERE
   energy_rank <= 3;
-Result & Insight:
-
-This query successfully identifies the highest-energy tracks for each decade. The results show a fascinating mix of genres, from early Rock & Roll and Punk in the mid-20th century to intense Metal and Electronic subgenres in more recent decades. This demonstrates how the peak energy of music has been expressed differently across various eras.
-
-4. Conclusion
-This project successfully demonstrates an end-to-end analytical workflow. By cleaning raw data, loading it into a relational database, and using a combination of SQL and Python, meaningful insights were extracted about the evolution of popular music. The findings confirm long-term trends and reveal specific, high-impact tracks and artists, showcasing a comprehensive approach to data analysis.
-
-
-
-
-
-
-
